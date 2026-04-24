@@ -1,10 +1,12 @@
 {
   "name": "neet-practice-fullstack",
   "version": "1.0.0",
-  "description": "NEET Practice App Root",
+  "description": "NEET Practice App",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && npm install && node server.js"
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "cd backend && node server.js"
   }
 }
